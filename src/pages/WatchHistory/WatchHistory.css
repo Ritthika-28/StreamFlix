@@ -1,0 +1,208 @@
+/* ==========================================
+   WATCH HISTORY PAGE
+========================================== */
+
+.history-page {
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--text-primary);
+  padding: 90px 30px;
+}
+
+/* ==========================================
+   BACK BUTTON
+========================================== */
+
+.history-back {
+  width: 45px;
+  height: 45px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: var(--primary-color);
+  color: #fff;
+
+  cursor: pointer;
+
+  margin-bottom: 20px;
+
+  transition: var(--transition);
+}
+
+.history-back:hover {
+  background: var(--primary-hover);
+  transform: scale(1.08);
+}
+
+/* ==========================================
+   TITLE
+========================================== */
+
+.history-page h1 {
+  margin-bottom: 30px;
+  font-size: 40px;
+  color: var(--text-primary);
+}
+
+/* ==========================================
+   EMPTY HISTORY
+========================================== */
+
+.empty-history {
+  text-align: center;
+  margin-top: 100px;
+  color: var(--text-secondary);
+}
+
+.empty-history h2 {
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.empty-history p {
+  color: var(--text-secondary);
+}
+
+/* ==========================================
+   GRID
+========================================== */
+
+.history-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 220px);
+  gap: 25px;
+  justify-content: flex-start;
+  margin-top: 30px;
+}
+
+/* ==========================================
+   CARD
+========================================== */
+
+.history-card {
+  width: 220px;
+
+  background: var(--background-card);
+
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+
+  overflow: hidden;
+
+  transition: var(--transition);
+
+  box-shadow: var(--shadow-lg);
+}
+
+.history-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--primary-color);
+}
+
+/* ==========================================
+   IMAGE
+========================================== */
+
+.history-card img {
+  width: 220px;
+  height: 320px;
+  object-fit: cover;
+}
+
+/* ==========================================
+   CONTENT
+========================================== */
+
+.history-content {
+  padding: 15px;
+  text-align: center;
+}
+
+.history-content h3 {
+  color: var(--text-primary);
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.history-content p {
+  color: var(--text-secondary);
+  margin-bottom: 15px;
+}
+
+/* ==========================================
+   CONTINUE BUTTON
+========================================== */
+
+.continue-btn {
+  width: 100%;
+
+  padding: 10px;
+
+  border: none;
+  border-radius: var(--radius-sm);
+
+  background: var(--primary-color);
+  color: #fff;
+
+  font-size: 15px;
+
+  cursor: pointer;
+
+  transition: var(--transition);
+}
+
+.continue-btn:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 768px) {
+
+  .history-page {
+    padding: 90px 20px 30px;
+  }
+
+  .history-page h1 {
+    font-size: 32px;
+  }
+
+  .history-grid {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+  }
+
+  .history-card,
+  .history-card img {
+    width: 100%;
+  }
+
+  .history-card img {
+    height: 260px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .history-page {
+    padding: 80px 15px 20px;
+  }
+
+  .history-page h1 {
+    font-size: 28px;
+  }
+
+  .history-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .history-card img {
+    height: 300px;
+  }
+
+}

@@ -1,0 +1,297 @@
+/* ==========================================
+   PROFILE PAGE
+========================================== */
+
+.profile-page {
+  min-height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    var(--background),
+    var(--background-light)
+  );
+  padding: 80px 20px 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.profile-container {
+  width: 100%;
+  max-width: 700px;
+
+  background: var(--background-card);
+
+  border-radius: var(--radius-lg);
+  padding: 25px;
+
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+}
+
+/* ==========================================
+   PROFILE HEADER
+========================================== */
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.profile-left {
+  flex-shrink: 0;
+}
+
+.profile-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile-avatar {
+  font-size: 110px;
+  color: var(--primary-color);
+}
+
+.profile-avatar-img {
+  width: 120px;
+  height: 120px;
+
+  border-radius: 50%;
+  object-fit: cover;
+
+  border: 4px solid var(--primary-color);
+}
+
+.profile-right h1 {
+  color: var(--text-primary);
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.profile-right p {
+  color: var(--text-secondary);
+  font-size: 16px;
+  margin-bottom: 18px;
+}
+
+/* ==========================================
+   EDIT BUTTON
+========================================== */
+
+.edit-btn {
+  width: fit-content;
+
+  padding: 10px 24px;
+
+  border: none;
+  border-radius: 30px;
+
+  background: var(--primary-color);
+  color: #fff;
+
+  cursor: pointer;
+  font-size: 15px;
+
+  transition: var(--transition);
+}
+
+.edit-btn:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+/* ==========================================
+   PROFILE CARDS
+========================================== */
+
+.profile-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.card {
+  background: var(--background-light);
+
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+
+  padding: 18px;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  cursor: pointer;
+
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary-color);
+}
+
+.card svg {
+  font-size: 30px;
+  color: var(--primary-color);
+}
+
+.card h3 {
+  color: var(--text-primary);
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.card p {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+/* ==========================================
+   ACCOUNT SECTION
+========================================== */
+
+.account-section {
+  margin-top: 25px;
+}
+
+.account-section h2 {
+  color: var(--text-primary);
+  font-size: 22px;
+
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+
+  border-bottom: 1px solid var(--border-color);
+}
+
+.account-option {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  background: var(--background-light);
+
+  padding: 14px 18px;
+
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+
+  margin-bottom: 12px;
+
+  cursor: pointer;
+
+  transition: var(--transition);
+}
+
+.account-option:hover {
+  border-color: var(--primary-color);
+  transform: translateX(5px);
+}
+
+.account-option svg {
+  color: var(--primary-color);
+  font-size: 22px;
+}
+
+.account-option span {
+  color: var(--text-primary);
+  font-size: 16px;
+}
+
+/* ==========================================
+   LOGOUT BUTTON
+========================================== */
+
+.logout-btn {
+  width: 100%;
+
+  margin-top: 20px;
+  padding: 14px;
+
+  border: none;
+  border-radius: var(--radius-md);
+
+  background: var(--primary-color);
+  color: #fff;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  transition: var(--transition);
+}
+
+.logout-btn:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+  .profile-container {
+    padding: 20px;
+  }
+
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .profile-right {
+    align-items: center;
+  }
+
+  .profile-right h1 {
+    font-size: 28px;
+  }
+
+  .profile-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-avatar {
+    font-size: 90px;
+  }
+
+  .profile-avatar-img {
+    width: 100px;
+    height: 100px;
+  }
+
+}
+/* ===========================
+   PRIVATE PROFILE
+=========================== */
+
+/* Private Profile */
+
+.private-badge {
+  display: inline-block;
+  background: #e50914;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.private-text {
+  color: #b3b3b3;
+  margin-bottom: 20px;
+}

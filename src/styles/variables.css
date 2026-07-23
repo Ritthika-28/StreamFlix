@@ -1,0 +1,64 @@
+:root {
+  /* Brand */
+  --primary-color: #e50914;
+  --primary-hover: #f6121d;
+
+  /* Default Theme (Dark) */
+  --background: #0f0f0f;
+  --background-light: #181818;
+  --background-card: #202020;
+
+  --text-primary: #ffffff;
+  --text-secondary: #b3b3b3;
+  --text-muted: #808080;
+
+  --border-color: rgba(255, 255, 255, 0.08);
+
+  /* Shadows */
+  --shadow-lg: 0 15px 40px rgba(0, 0, 0, 0.4);
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+
+  /* Transition */
+  --transition: all 0.3s ease;
+
+  /* Navbar */
+  --navbar-height: 80px;
+
+  /* Container */
+  --container-width: 1400px;
+
+  /* Font */
+  --font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+/* ================= DARK THEME ================= */
+
+body.dark-theme {
+  --background: #0f0f0f;
+  --background-light: #181818;
+  --background-card: #202020;
+
+  --text-primary: #ffffff;
+  --text-secondary: #b3b3b3;
+  --text-muted: #808080;
+
+  --border-color: rgba(255,255,255,0.08);
+}
+
+/* ================= LIGHT THEME ================= */
+
+body.light-theme {
+  --background: #f5f5f5;
+  --background-light: #ffffff;
+  --background-card: #ffffff;
+
+  --text-primary: #111111;
+  --text-secondary: #444444;
+  --text-muted: #666666;
+
+  --border-color: rgba(0,0,0,0.08);
+}

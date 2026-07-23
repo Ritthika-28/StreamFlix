@@ -1,0 +1,126 @@
+.settings-subpage {
+  min-height: 100vh;
+  background: #111;
+  color: #fff;
+  padding: 100px 20px 40px;
+}
+
+/* Header */
+
+.sub-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.sub-header button {
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  background: #222;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.sub-header button:hover {
+  background: #e50914;
+  transform: scale(1.08);
+}
+
+.sub-header h2 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+/* Dark Mode Card */
+
+.option {
+  max-width: 700px;
+  margin: auto;
+  background: #1c1c1c;
+  border-radius: 12px;
+  padding: 22px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+.option span {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* Toggle Switch */
+
+.option input[type="checkbox"] {
+  width: 55px;
+  height: 28px;
+  cursor: pointer;
+  accent-color: #e50914;
+}
+
+/* ---------- Light Theme ---------- */
+
+body.light-theme .settings-subpage {
+  background: #f4f4f4;
+  color: #111;
+}
+
+body.light-theme .sub-header button {
+  background: #ddd;
+  color: #111;
+}
+
+body.light-theme .sub-header button:hover {
+  background: #e50914;
+  color: white;
+}
+
+body.light-theme .option {
+  background: white;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+body.light-theme .option span {
+  color: #111;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 768px) {
+  .settings-subpage {
+    padding: 90px 15px 30px;
+  }
+
+  .sub-header h2 {
+    font-size: 26px;
+  }
+
+  .option {
+    padding: 18px;
+  }
+
+  .option span {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sub-header h2 {
+    font-size: 22px;
+  }
+
+  .option {
+    flex-direction: row;
+    padding: 16px;
+  }
+
+  .option span {
+    font-size: 15px;
+  }
+}

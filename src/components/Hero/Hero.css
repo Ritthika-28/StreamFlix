@@ -1,0 +1,135 @@
+/* ==========================================
+   HERO
+========================================== */
+
+.hero {
+  width: 100%;
+  height: 90vh;
+
+  background-image:
+    linear-gradient(
+      rgba(0,0,0,.5),
+      rgba(0,0,0,.9)
+    ),
+    url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1600");
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  width: 100%;
+  padding: 0 80px;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+/* ==========================================
+   TEXT
+========================================== */
+
+.hero h1 {
+  color: var(--text-primary);
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  color: var(--text-secondary);
+  font-size: 20px;
+  line-height: 1.7;
+  margin-bottom: 35px;
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.play-btn,
+.list-btn {
+  border: none;
+  padding: 15px 35px;
+  border-radius: var(--radius-sm);
+  font-size: 18px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.play-btn {
+  background: var(--text-primary);
+  color: var(--background);
+  font-weight: 600;
+}
+
+.play-btn:hover {
+  opacity: 0.9;
+}
+
+.list-btn {
+  background: var(--background-light);
+  color: var(--text-primary);
+}
+
+.list-btn:hover {
+  background: var(--background-card);
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 992px) {
+
+  .hero-overlay {
+    padding: 0 40px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .hero {
+    height: 80vh;
+  }
+
+  .hero-overlay {
+    padding: 0 25px;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .play-btn,
+  .list-btn {
+    width: 220px;
+    text-align: center;
+  }
+}

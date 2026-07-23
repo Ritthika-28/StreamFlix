@@ -1,0 +1,79 @@
+/* ==========================================
+   MOVIE ROW
+========================================== */
+
+.movie-row {
+  margin: 40px 0;
+}
+
+.movie-row h2 {
+  color: var(--text-primary);
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+/* ==========================================
+   MOVIE CONTAINER
+========================================== */
+
+.movie-row-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 12px;
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+.movie-row-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.movie-row-container::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 10px;
+}
+
+.movie-row-container::-webkit-scrollbar-track {
+  background: var(--background-light);
+}
+
+/* Firefox */
+
+.movie-row-container {
+  scrollbar-color: var(--primary-color) var(--background-light);
+  scrollbar-width: thin;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 768px) {
+
+  .movie-row {
+    margin: 30px 0;
+  }
+
+  .movie-row h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .movie-row h2 {
+    font-size: 20px;
+  }
+
+  .movie-row-container {
+    gap: 15px;
+  }
+
+}

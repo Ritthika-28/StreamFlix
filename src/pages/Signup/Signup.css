@@ -1,0 +1,277 @@
+/* ==========================================
+   SIGNUP PAGE
+========================================== */
+
+.signup-page {
+  position: relative;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 30px;
+
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.85)
+    ),
+    url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=2070&auto=format&fit=crop");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.signup-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.signup-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 480px;
+}
+
+/* ==========================================
+   CARD
+========================================== */
+
+.signup-card {
+  background: var(--background-card);
+
+  backdrop-filter: blur(18px);
+
+  border: 1px solid var(--border-color);
+
+  border-radius: var(--radius-lg);
+
+  padding: 45px;
+
+  box-shadow: var(--shadow-lg);
+}
+
+.signup-card h1 {
+  color: var(--text-primary);
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.signup-card p {
+  color: var(--text-secondary);
+  margin-bottom: 35px;
+  line-height: 1.7;
+}
+
+/* ==========================================
+   INPUTS
+========================================== */
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  background: var(--background-light);
+
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+
+  padding: 16px;
+
+  margin-bottom: 18px;
+
+  transition: var(--transition);
+}
+
+.input-group:focus-within {
+  border-color: var(--primary-color);
+}
+
+.input-group svg {
+  color: var(--primary-color);
+  font-size: 18px;
+}
+
+.input-group input {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: var(--text-primary);
+
+  font-size: 15px;
+}
+
+.input-group input::placeholder {
+  color: var(--text-muted);
+}
+
+/* ==========================================
+   PASSWORD
+========================================== */
+
+.password-group {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-password {
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.toggle-password:hover {
+  color: var(--primary-color);
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.signup-btn {
+  width: 100%;
+
+  padding: 15px;
+
+  border: none;
+  border-radius: var(--radius-sm);
+
+  background: var(--primary-color);
+
+  color: white;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: var(--transition);
+}
+
+.signup-btn:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.google-btn {
+  width: 100%;
+
+  padding: 15px;
+
+  border: none;
+  border-radius: var(--radius-sm);
+
+  background: var(--background-light);
+
+  color: var(--text-primary);
+
+  font-weight: 600;
+
+  margin-top: 20px;
+
+  cursor: pointer;
+
+  transition: var(--transition);
+}
+
+.google-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* ==========================================
+   DIVIDER
+========================================== */
+
+.divider {
+  position: relative;
+  text-align: center;
+
+  margin: 30px 0;
+
+  color: var(--text-muted);
+}
+
+.divider::before {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+  left: 0;
+
+  width: 100%;
+  height: 1px;
+
+  background: var(--border-color);
+}
+
+.divider span {
+  position: relative;
+
+  background: var(--background-card);
+
+  padding: 0 15px;
+}
+
+/* ==========================================
+   LOGIN LINK
+========================================== */
+
+.login-text {
+  text-align: center;
+
+  margin-top: 30px;
+
+  color: var(--text-secondary);
+}
+
+.login-text a {
+  color: var(--primary-color);
+
+  margin-left: 8px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+.login-text a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 768px) {
+
+  .signup-card {
+    padding: 30px;
+  }
+
+  .signup-card h1 {
+    font-size: 28px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .signup-page {
+    padding: 15px;
+  }
+
+  .signup-card {
+    padding: 25px;
+  }
+
+}

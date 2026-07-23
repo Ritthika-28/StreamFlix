@@ -1,0 +1,167 @@
+.movie-details {
+  display: flex;
+  gap: 50px;
+  padding: 100px 60px;
+  background: #111;
+  color: white;
+  min-height: 100vh;
+}
+
+
+.movie-left {
+  flex: 1;
+}
+
+.movie-poster {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 12px;
+}
+
+.movie-right {
+  flex: 2;
+}
+
+.movie-title-section{
+  width:100%;
+  margin-bottom:30px;
+}
+
+.movie-title{
+  display:block;
+  width:100%;
+  font-size:56px;
+  font-weight:700;
+  color:#fff;
+  margin:0 0 30px 0;
+  line-height:1.1;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.details-grid h4 {
+  color: #e50914;
+  margin-bottom: 6px;
+}
+
+.details-grid p {
+  color: #ddd;
+  line-height: 1.5;
+}
+
+.movie-right h3 {
+  margin-top: 20px;
+  color: #fff;
+}
+
+.movie-right > p {
+  color: #ccc;
+  line-height: 1.8;
+  margin-top: 10px;
+}
+
+.watch-btn {
+  margin-top: 30px;
+  padding: 14px 35px;
+  border: none;
+  border-radius: 8px;
+  background: #e50914;
+  color: rgb(233, 228, 228);
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.watch-btn:hover {
+  background: #b20710;
+}
+
+@media (max-width: 768px) {
+  .movie-details {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
+.movie-poster {
+  width: 380px;
+  height: 560px;
+  border-radius: 12px;
+  object-fit: cover;
+  display: block;
+}
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.details-grid > div {
+  min-width: 0;
+}
+
+.details-grid p {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.movie-right h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.movie-right > p {
+  color: #ccc;
+  line-height: 1.8;
+}
+
+
+.watch-now-btn {
+  background: #e50914;
+  color: white;
+  border: none;
+  padding: 14px 35px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 25px;
+  transition: all 0.3s ease;
+}
+
+.watch-now-btn:hover {
+  background: #b20710;
+  transform: scale(1.05);
+}
+
+.watch-now-btn:active {
+  transform: scale(0.98);
+}
+.back-btn {
+  position: fixed;
+  top: 90px;
+  left: 30px;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 26px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.back-btn:hover {
+  background: #e50914;
+  transform: scale(1.1);
+}

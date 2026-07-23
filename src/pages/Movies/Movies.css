@@ -1,0 +1,142 @@
+/* ==========================================
+   MOVIES PAGE
+========================================== */
+
+.movies-page {
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--text-primary);
+  padding: 100px 40px 40px;
+}
+
+.movies-page h1 {
+  font-size: 40px;
+  margin-bottom: 30px;
+  color: var(--text-primary);
+}
+
+/* ==========================================
+   MOVIE SECTION
+========================================== */
+
+.movie-section {
+  margin-bottom: 50px;
+}
+
+.movie-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+
+/* ==========================================
+   NETFLIX STYLE ROW
+========================================== */
+
+.movies-grid {
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 15px;
+  scroll-behavior: smooth;
+
+  scrollbar-width: none;
+}
+
+.movies-grid::-webkit-scrollbar {
+  display: none;
+}
+
+/* ==========================================
+   MOVIE CARD
+========================================== */
+
+.movie-card {
+  min-width: 170px;
+  max-width: 170px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.movie-card:hover {
+  transform: scale(1.08);
+}
+
+.movie-card img {
+  width: 170px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+}
+
+.movie-card h3 {
+  font-size: 15px;
+  text-align: center;
+  margin-top: 8px;
+  color: var(--text-primary);
+}
+
+.movie-card p {
+  text-align: center;
+  color: gold;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 768px) {
+  .movies-page {
+    padding: 90px 20px 30px;
+  }
+
+  .movies-page h1 {
+    font-size: 32px;
+  }
+
+  .movie-section h2 {
+    font-size: 24px;
+  }
+
+  .movie-card {
+    min-width: 150px;
+    max-width: 150px;
+  }
+
+  .movie-card img {
+    width: 150px;
+    height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .movies-page {
+    padding: 85px 15px 25px;
+  }
+
+  .movies-page h1 {
+    font-size: 28px;
+  }
+
+  .movie-card {
+    min-width: 130px;
+    max-width: 130px;
+  }
+
+  .movie-card img {
+    width: 130px;
+    height: 190px;
+  }
+
+  .movie-card h3 {
+    font-size: 14px;
+  }
+
+  .movie-card p {
+    font-size: 13px;
+  }
+}

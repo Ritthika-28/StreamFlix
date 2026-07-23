@@ -1,0 +1,137 @@
+/* ==========================================
+   CONTINUE WATCHING PAGE
+========================================== */
+
+.continue-page {
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--text-primary);
+  padding: 100px 40px;
+}
+
+.continue-page h1 {
+  margin-bottom: 30px;
+  font-size: 40px;
+  color: var(--text-primary);
+}
+
+/* ==========================================
+   GRID
+========================================== */
+
+.continue-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+/* ==========================================
+   CARD
+========================================== */
+
+.continue-card {
+  background: var(--background-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+
+  cursor: pointer;
+
+  transition: var(--transition);
+  box-shadow: var(--shadow-lg);
+}
+
+.continue-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--primary-color);
+}
+
+/* ==========================================
+   IMAGE
+========================================== */
+
+.continue-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+/* ==========================================
+   CONTENT
+========================================== */
+
+.continue-card h3 {
+  margin: 15px;
+  color: var(--text-primary);
+  font-size: 18px;
+}
+
+.continue-card p {
+  margin: 10px 15px 15px;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+/* ==========================================
+   PROGRESS BAR
+========================================== */
+
+.progress-bar {
+  width: calc(100% - 30px);
+  margin: 0 15px;
+
+  height: 8px;
+
+  background: var(--border-color);
+
+  border-radius: 10px;
+
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--primary-color);
+  border-radius: 10px;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 768px) {
+
+  .continue-page {
+    padding: 90px 20px 30px;
+  }
+
+  .continue-page h1 {
+    font-size: 32px;
+  }
+
+  .continue-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .continue-card img {
+    height: 250px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .continue-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .continue-card img {
+    height: 280px;
+  }
+
+  .continue-page h1 {
+    font-size: 28px;
+  }
+
+}
